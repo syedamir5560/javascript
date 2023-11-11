@@ -55,6 +55,34 @@ example=>
     }
     fun()
 
+    example2=>
+            let body = document.querySelector('body')
+
+var xml = new XMLHttpRequest();
+xml.open("GET", "mydata.json", true);
+function fun() {
+    xml.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(this.responseText)
+
+            let el = ' '
+            data.forEach(element => {
+                el += `<ul>
+                         <li>${element.name}</li>
+                         <li>${element.age}</li>
+                        </ul>`;
+            });
+            body.innerHTML =el
+            body.style.color = "red"
+            body.style.color = "gray"
+            body.style.backgroundColor = "black"
+        
+        }
+    }
+    xml.send();
+}
+
+
     
 */
 
