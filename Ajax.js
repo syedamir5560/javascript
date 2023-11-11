@@ -50,7 +50,7 @@ example=>
             if (this.readyState == 4 && this.status == 200) {
                 document.querySelector('#div2').innerHTML = this.responseText
             }
-        }
+        }   
         xml.send();
     }
     fun()
