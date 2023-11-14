@@ -65,7 +65,7 @@ function fun() {
         if (this.readyState == 4 && this.status == 200) {
             let data = JSON.parse(this.responseText)
 
-            let el = ' '
+            let el = ''
             data.forEach(element => {
                 el += `<ul>
                          <li>${element.name}</li>
@@ -82,6 +82,45 @@ function fun() {
     xml.send();
 }
 
+real example of contry api=>
+
+let btn = document.querySelector(".button-29")
+let cont = document.querySelector(".cont")
+let input = document.querySelector(".input")
+
+var xml = new XMLHttpRequest();
+
+let par = input.value
+console.log(par)
+xml.open("GET", "https://restcountries.com/v3.1/name/"+par);
+function fun() {
+ 
+    xml.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let [data] = JSON.parse(this.responseText)
+            console.log(data)
+            let lang = Object.values(data.languages)
+            console.log(lang)
+            let cur=Object.values(data.currencies)[0]
+            console.log(cur)
+            let section =`<section class="sec-1">
+            <h1> ${data.name.common}</h1>
+            <img src="${data.flags.png}" width=50% height=50% >
+             <h2> Language : ${lang} </h2>
+             <h2> Currency : ${cur.symbol} , ${cur.name}</h2>
+              <h2>Population : ${data.population}</h2>
+            </section>`
+
+            cont.style.visibility="visible"
+
+            cont.innerHTML=section
+
+
+        }
+    }
+    xml.send();
+}
+            
 
     
 */

@@ -521,6 +521,115 @@ async function display() {
           console.log(z);
         });
 
+*****************Graviton Async/Await******************************
+
+// ASYNC AWAIT
+
+// normal function
+
+// function one(){
+//     return 'NEW ZEALAND'
+// }
+// console.log( one() );
+
+// // async keyword
+
+// async function two(){
+//     return  'NEW ZEALAND 11'
+// }
+// console.log( two() );
+
+///--------------------------------
+
+// let p = new Promise((resolve,reject)=>{
+//     // resolve('Promise Resolved')
+//     reject('Promise Rejected')
+// })
+// // console.log(p);
+
+// function one(){
+//     return p
+// }
+// console.log( one() );
+
+// one()
+// .then(val=>console.log(val))
+// .catch(err=>console.log(err))
+
+///--------------------------------
+// without await
+
+// let p = new Promise((resolve,reject)=>{
+//    setTimeout(() => {
+//     resolve('Promise Resolved')
+//     // reject('Promise Rejected')
+//    }, 4000);
+// })
+// console.log(p);
+
+// async function one(){
+   
+// p.then(val=>console.log(val))
+
+// console.log(' FUNCTION ONE');
+    
+// }
+// one()
+
+//---------------------------
+
+// let p = new Promise((resolve,reject)=>{
+//    setTimeout(() => {
+//     resolve('Promise Resolved')
+//     // reject('Promise Rejected')
+//    }, 4000);
+// })
+// console.log(p);
+
+// async function one(){
+//     let a = await p
+
+//     console.log(' FUNCTION ONE');
+//     console.log(a);
+    
+// }
+// one()
+
+///-----------------------------
+let p1 = new Promise((resolve,reject)=>{
+   setTimeout(() => {
+    resolve('Promise 1 Resolved')
+    // reject('Promise Rejected')
+   }, 4000);
+})
+// console.log(p1);
+
+let p2 = new Promise((resolve,reject)=>{
+   setTimeout(() => {
+    // resolve('Promise 2 Resolved')
+    reject('Promise Rejected')
+   }, 2000);
+})
+// console.log(p2);
+
+async function three(){
+   try {
+    let a = await p1
+    console.log('Function ONE 1');
+    console.log(a);
+
+    let b = await p2
+    console.log('Function ONE 2');
+    console.log(b);
+   } catch (error) {
+    
+console.log(error);
+
+   }
+}
+
+three()
+
 
 */
 
