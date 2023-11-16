@@ -114,8 +114,6 @@ function fun() {
             cont.style.visibility="visible"
 
             cont.innerHTML=section
-
-
         }
     }
     xml.send();
