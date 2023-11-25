@@ -1,22 +1,25 @@
 /*
-OOP=>
-            Object Orientation is a software development paradigm that follows real-world 
-             modelling. Object Orientation, considers a program as a collection of objects that 
-            communicates with each other via mechanism called methods. ES6 supports these 
-            object-oriented components too
 
+Object Oreinted Programming=>
+     Object Orientation is a software development paradigm that follows real-world 
+    modelling. Object Orientation, considers a program as a collection of objects that 
+    communicates with each other via mechanism called methods. ES6 supports these 
+    object-oriented components too
 
 Prototype=>
-         In javascript object can inherite feature from one another via prototype .every object has its own property called prototype.Because a prototype itself is also another object, the prototype has its own prototype. This creates a something called prototype chain. The prototype chain ends when a prototype has null for its own prototype.
+        In javascript object can inherite feature from one another via prototype .every object has
+        its own property called prototype.Because a prototype itself is also another object, 
+        the prototype has its own prototype. This creates a something called prototype chain. 
+        The prototype chain ends when a prototype has null for its own prototype.
 
 example=>       let person = {'name' : 'John'}
 
-            when you console person object we will find person object has property called [[prototype]] prototype itself  is an object so prototype have its own property.
-            When you access a property of an object, if the object has that property, it’ll return the property value.
-            
-            if property do not exist in object then javascript engine search  it in prototype of an object.
-
-            If the JavaScript engine cannot find the property in the object’s prototype, it’ll search in the prototype’s prototype until either it finds the property or reaches the end of the prototype chain.
+        when you console person object we will find person object has property called [[prototype]]
+        prototype itself  is an object so prototype have its own property.When you access a property
+        of an object, if the object has that property, it’ll return the property value.
+        if property do not exist in object then javascript engine search  it in prototype of an object.
+        If the JavaScript engine cannot find the property in the object’s prototype, it’ll search in 
+        the prototype’s prototype until either it finds the property or reaches the end of the prototype chain.
 
 Defining methods in the JavaScript prototype object=>
                 function Person(name) {
@@ -29,7 +32,8 @@ Defining methods in the JavaScript prototype object=>
                 consol.log(p1);
             console.log( p1.greet());
 
-The combination of the constructor and prototype patterns is the most common way to define custom types in ES5. In this pattern:
+The combination of the constructor and prototype patterns is the most common way to define custom 
+types in ES5. In this pattern:
 
     1)The constructor pattern defines the object properties.
     2)The prototype pattern defines the object methods.
@@ -48,7 +52,8 @@ The combination of the constructor and prototype patterns is the most common way
                 console.log(p1.fullname());
 
 Prototype Inheritance=>
-                In prototypal inheritance, an object “inherits” properties from another object via the prototype linkage.  
+            In prototypal inheritance, an object “inherits” properties from another object via 
+            the prototype linkage.  
                 
                 let person = {
                     name: "John Doe",
@@ -57,15 +62,17 @@ Prototype Inheritance=>
                 }
             };
 
-            The person object has a link to the anonymous object referenced by the Object() function. The [[Prototype]] represents the linkage:
+            The person object has a link to the anonymous object referenced by the Object() function.
+             The [[Prototype]] represents the linkage:
 
-            let teacher = {
+            let teacher =   {
             teach: function (subject) {
-             return "I can teach " + subject;
+            return "I can teach " + subject;
         }
     };
 
-            If you want the teacher object to access all methods and properties of the person object, you can set the prototype of teacher object to the person object like this:
+            If you want the teacher object to access all methods and properties of the person object,
+             you can set the prototype of teacher object to the person object like this:
 
             teacher.__proto__ = person;
             console.log(teacher.name); //access name properety from person object
@@ -101,7 +108,8 @@ Prototype Inheritance=>
 
 Classes in ES6=>
 
-ES6 introduces the class keyword that makes the constructor/prototype pattern easier to use. For example, the following uses the class keyword to define exactly the same Person type:
+ES6 introduces the class keyword that makes the constructor/prototype pattern easier to use.
+ For example, the following uses the class keyword to define exactly the same Person type:
 
                 class Person {
                     constructor(firstName, lastName) {
@@ -129,14 +137,11 @@ o Behavior:=> Describes how the object will act.
 o Identity:=>    A unique value that distinguishes an object from a set of similar 
 such objects.
 
-
-
-
-            
-
 Classes=>
-    A JavaScript class is a blueprint for creating objects. A class encapsulates data and functions that manipulate data. ES6 classes are just special functions.
-    Prior to ES6, JavaScript had no concepts of classes. To mimic a class, you often use the constructor/prototype pattern.es6 classes just spacial function.
+    A JavaScript class is a blueprint for creating objects. A class encapsulates data and functions 
+    that manipulate data. ES6 classes are just special functions.
+    Prior to ES6, JavaScript had no concepts of classes. To mimic a class, you often use the 
+    constructor/prototype pattern.es6 classes just spacial function.
 
      Method: Methods facilitate communication between object
 
@@ -156,7 +161,7 @@ Classes=>
  Functions:=> Functions represent actions an object can take. They are also at times 
 referred to as methods.
 
-    Exe=>
+Exe=>
                     class User {
 
                     constructor(name,rollno) {
@@ -166,17 +171,18 @@ referred to as methods.
 
                     sayHi() {
                         console.log(`${this.name}and ${this.rollno}`);
+                        }
                     }
 
-                    }
-
-                    // Usage:
-                    let user = new User("John", 25);    
-                    user.sayHi();
+                // Usage:
+                let user = new User("John", 25);    
+                user.sayHi();
 
 Not just a syntactic sugar:=>
 
-            Sometimes people say that class is a “syntactic sugar” (syntax that is designed to make things easier to read, but doesn’t introduce anything new), because we could actually declare the same thing without using the class keyword at all:
+            Sometimes people say that class is a “syntactic sugar” (syntax that is designed to make 
+                things easier to read, but doesn’t introduce anything new), because we could actually
+                 declare the same thing without using the class keyword at all:
 
             // rewriting class User in pure functions
 
@@ -200,7 +206,7 @@ Not just a syntactic sugar:=>
 
             =>ES6 Classes are not only syntactical sugar but also provide some other features
 
-Getters/setters=>  
+Getters/setters==>>  
         A setter function is invoked when there is an attempt to set the value of a property. 
         The set keyword is used to define a setter function.
 
@@ -228,7 +234,6 @@ Getters/setters=>
                             }
                             this._name = value;
                         }
-
                         }
 
                         let user = new User("John");
@@ -237,14 +242,13 @@ Getters/setters=>
                         user = new User(""); // Name is too short.   
 
 =>The Static Keyword=>
-The static keyword can be applied to functions in a class. Static members are referenced 
+        The static keyword can be applied to functions in a class. Static members are referenced 
 by the class name.
 
 Example1=>    class Statickey{
                     static person(){
                         console.log("static person");
                     }
-
             }
             Statickey.person();//invoke static method
 
@@ -261,13 +265,11 @@ Ex2(sorting)=>(static methods)
                 static compareByIncome(user1,user2){
                     return (user1.income - user2.income);
                 }
-
                 }
 
                 let user1=new Users("aamir",45,45000);  
                 let user2=new Users("ali",30,10000);
                 let user3=new Users("aliza",48,50000);
-
 
                 let user=[user1,user2,user3];
                 user.sort(Users.compareByAge);
@@ -275,10 +277,9 @@ Ex2(sorting)=>(static methods)
 
                 console.log(user);    
 
-example3=>static data member
+example3=> Static data member
                 class Users{
                     static id=1;
-
                     constructor(name,age,income){
                         this.name=name;
                         this.age=age;
@@ -301,7 +302,11 @@ ES6 enables a child class to invoke its parent class data member. This is achiev
 the super keyword. The super keyword is used to refer to the immediate parent of a class.
 
 Inheritance=>
-            ES6 supports the concept of Inheritance. Inheritance is the ability of a program to create new entities from an existing entity - here a class. The class that is extended to create ES6 newer classes is called the parent class/super class. The newly created classes are called the child/sub classes.A class inherits from another class using the ‘extends’ keyword. Child classes inherit all properties and methods except constructors from the parent class.
+        ES6 supports the concept of Inheritance. Inheritance is the ability of a program to create
+        new entities from an existing entity - here a class. The class that is extended to create
+        ES6 newer classes is called the parent class/super class. The newly created classes are 
+        called the child/sub classes.A class inherits from another class using the ‘extends’ keyword.
+        Child classes inherit all properties and methods except constructors from the parent class.
 
 Inheritance can be classified as:=>
              Single: Every class can at the most extend from one parent class
@@ -322,14 +327,11 @@ Inheritance can be classified as:=>
 
                 deposit(amount){
                     this.balance += amount;
-
                 }
 
                 widraw(amount){
                     this.balance -= amount;
                 }
-
-
                 }
 
                 class CurrnetAcount extends BankAccount{
@@ -337,8 +339,6 @@ Inheritance can be classified as:=>
 
                     constructor(custumerName,balance=0){
                         super(custumerName,balance)
-
-
                     }
 
                     takeBusnessLoan(amount){
@@ -351,8 +351,6 @@ Inheritance can be classified as:=>
 
                 constructor(custumerName,balance=0){
                     super(custumerName,balance)
-
-
                 }
 
                 takePersonalLoan(amount){
@@ -375,10 +373,157 @@ Example=>
             var isPerson=obj instanceof Person;
             console.log(" obj is an instance of Person " + isPerson);
 
+************************************graviton web**********************************
+
+    // inheritance between class using constructor function
+      // class => 1
+
+      //   let Person = function(firstname,birthyear){
+      //       this.firstname = firstname;
+      //       this.birthyear = birthyear
+      //   }
+
+      //   Person.prototype.calcage =function(){
+      //       console.log( 2023 - this.birthyear );
+      //   }
+
+      //   // class => 2
+      
+      //   let Student = function(firstname,birthyear,course){
+      //       // this.firstname = firstname;
+      //       // this.birthyear = birthyear
+
+      //       Person.call(this,firstname,birthyear)
+      //       this.course = course
+      //   }
+
+      //   Student.prototype = Object.create(Person.prototype)
+
+      // Student.prototype.introduce = function(){
+      //     console.log(My namae is ${this.firstname} and i study ${this.course});
+      // }
+
+      // // instance of student
+
+      // let raphael = new Student('Raphael Nadal',2001, 'Bsc Botany')
+      // console.log(raphael);
+      // raphael.introduce()
+      // raphael.calcage()
+
+      // console.log('******');
+      // console.log( raphael instanceof Person );
+      // console.log( raphael instanceof Student );
+
+      console.log("**********");
+
+      //Es6
+
+      // class expression
+      // let Person = class{}
+
+      // class PersonCl {
+      //     constructor(firstname,birtyear){
+      //         this.firstname = firstname;
+      //         this.birtyear = birtyear;
+      //     }
+
+      //     calcage(){
+      //         console.log(2023-this.birtyear);
+      //     }
+
+      //     greet(){
+      //         console.log(Good Morning from ${this.firstname});
+      //     }
+      // }
+
+      // let jess = new PersonCl('Jessica',2002)
+      // console.log(jess);
+      // jess.calcage();
+      // jess.greet()
+
+      // console.log( jess instanceof PersonCl );
+
+      //--------------------------------
+
+      // class Fruit {
+      //     constructor(name){
+      //         this._name = name
+      //     }
+
+      //     sweet(){
+      //         console.log(${this._name} is sweet);
+      //     }
+
+      //     get seed(){
+      //         console.log(${this._name} has seed init);
+      //     }
+
+      //     set fruitsize(para){
+      // this._name = para
+      //     }
+
+      // }
+
+      // let a = new Fruit('Kiwi')
+      // console.log(a);
+      // a.sweet()
+      // a.seed
+      // a.fruitsize = 'Peach'
+      // a.sweet()
+      // a.seed
+
+      //inheritance between clases
+
+      class Person {
+        constructor(firstname, lastname) {
+          this.firstname = firstname;
+          this.lastname = lastname;
+        }
+
+         greeting() {
+          console.log(God MOrning ${this.firstname} ${this.lastname});
+        }
+
+       static getmembership() {
+            console.log(${this.firstname} has bought ${this.membership} Membership for $500);
+            return 567
+        }
+
+      }
+
+      class Customer extends Person {
+        constructor(firstname, lastname, phone, membership) {
+          super(firstname, lastname);
+
+          this.phone = phone;
+          this.membership = membership;
+        }
+
+    
+
+      }
+
+let john = new Customer('John','Doe',6765756,'Premium')
+console.log(john);
+john.greeting()
+
+console.log('****');
+
+console.log(Person.prototype);
+console.log(Customer.prototype);
+// john.getmembership()
+
+
+
+
+
+
+
+
+
             */
 
 
-            
 
 
-            
+
