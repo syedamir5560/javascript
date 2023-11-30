@@ -243,7 +243,9 @@ Getters/setters==>>
 
 =>The Static Keyword=>
         The static keyword can be applied to functions in a class. Static members are referenced 
-by the class name.
+by the class name.The JavaScript provides static methods that belong to the class instead of an 
+instance of that class. So, an instance is not required to call the static method. These methods
+ are called directly on the class itself.
 
 Example1=>    class Statickey{
                     static person(){
@@ -388,10 +390,10 @@ Example=>
       //   }
 
       //   // class => 2
-      
+
       //   let Student = function(firstname,birthyear,course){
-      //       // this.firstname = firstname;
-      //       // this.birthyear = birthyear
+      //        this.firstname = firstname;
+      //        this.birthyear = birthyear
 
       //       Person.call(this,firstname,birthyear)
       //       this.course = course
@@ -419,6 +421,7 @@ Example=>
       //Es6
 
       // class expression
+
       // let Person = class{}
 
       // class PersonCl {
