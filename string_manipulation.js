@@ -1,18 +1,22 @@
 // String=>
 
-// In JavaScript, a string is a sequence of zero or more characters.A string literal begins and ends with either a single quote(') or a double quote (").
+//  In JavaScript, a string is a sequence of zero or more characters.A string literal begins and ends with either a single 
+// quote(') or a double quote (").
 
-// JavaScript strings are primitive values.Also, strings are immutable.It means that if you modify a string, you will always get a new string.The original string doesn’t change.
+//  JavaScript strings are primitive values.Also, strings are immutable.It means that if you modify a string, you will always get 
+//  a new string.The original string doesn’t change.
 
-// A string that begins with a double quote must end with a double quote.Likewise, a string that begins with a single quote must also end with a single quote:
+// A string that begins with a double quote must end with a double quote.Likewise, a string that begins with a single quote must 
+// also end with a single quote:
 
-// let greeting = 'Hi';
-// let message = "Bye";
+//  let greeting = 'Hi';007 
+//  let message = "Bye";
 
-// The template literals allow you to use the single quotes and double quotes inside a string without the need of escaping them.For example:
+//  The template literals allow you to use the single quotes and double quotes inside a string without the need of escaping
+//   them.For example:
 
 // let mesage = `"I'm good". She said"`;
-// console.log(mesage);
+//  console.log(mesage);
 
 //to find legth of string
 let str='aamir';
@@ -94,16 +98,17 @@ console.log( a.includes('P') );
 
 // pad start and pad end
 
-// The padStart() method pads a string in starting of the string with another string (multiple times) until it reaches a given length.
+// The padStart() method pads a string in starting of the string with another string (multiple times) until it reaches a 
+//      given length.
 
-let a = 'Peach'
-console.log(a);
-console.log(a.length);
+// let a = 'Peach'
+// console.log(a);
+// console.log(a.length);
 
-console.log( a.padStart(8,'*') );
- console.log( a.padStart(3,'*') );
-console.log( a.padEnd(8,'@') );
-console.log(a.padEnd(9,'^'));
+// console.log( a.padStart(8,'*') );
+//  console.log( a.padStart(3,'*') );
+// console.log( a.padEnd(8,'@') );
+// console.log(a.padEnd(9,'^'));
 
 
 // slice=>
@@ -114,26 +119,28 @@ console.log(a.padEnd(9,'^'));
 // console.log( a.slice( 2, 6 ) );// start, end-1
 // console.log( a.slice(7,4) );//Not Possible
 
-// The substring() method swaps its two arguments if indexStart is greater than indexEnd , meaning that a string is still returned. The slice() method returns an empty string if this is the case.
+// The substring() method swaps its two arguments if indexStart is greater than indexEnd , meaning that a string is still 
+// returned. The slice() method returns an empty string if this is the case.
 
 // Splite=>
 // The split() method splits a string into an array of substrings.
 // The split() method returns the new array.
 // The split() method does not change the original string.
 
-let b='my sting';
+// let b='my sting';
 
-let arr=b.split(" ");
-console.log(arr);
+// let arr=b.split(" ");
+// console.log(arr);
 
 // Join=>
-// The join() method concatenates all of the elements in an array (or an array-like object), separated by commas or a specified separator string, and returns a new string
+// The join() method concatenates all of the elements in an array (or an array-like object), separated by commas or a specified 
+//separator string, and returns a new string
 
 
-let a = 'RivernileinEgypt';
+// let a = 'RivernileinEgypt';
 
-let b=a.split('n');
-console.log(b.join(" "));
+// let b=a.split('n');
+// console.log(b.join(" "));
 
 // 11 top of the world === Top Of The World
 

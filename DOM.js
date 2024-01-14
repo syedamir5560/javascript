@@ -1,7 +1,8 @@
 /*
 What is DOM ?
     
-Document object model is an API for manipulating htlm document.DOM represent html document as a tree of nodes.DOM  provoide a function that allow you to add , remove ,  and modify part of the document effectivly
+Document object model is an API for manipulating htlm document.DOM represent html document as a tree of nodes.DOM
+  provoide a function that allow you to add , remove ,  and modify part of the document effectivly
 
 A document as a hierarchy of nodes=>
 
@@ -16,14 +17,17 @@ The DOM represents an HTML document as a hierarchy of nodes. Consider the follow
     </body>
 </html>
 
-In this DOM tree, the document is the root node. The root node has one child node which is the <html> element. The <html> element is called the document element.   
+In this DOM tree, the document is the root node. The root node has one child node which is the <html> element. The <html>
+ element is called the document element.   
 
 selecting Elements=>
 
 1)  select element by id=>
 
-    The document.getElementById() method returns an Element object that represents an HTML element with an id that matches a specified string.
-    If the document has no element with the specified id, the document.getElementById() returns null.Because the id of an element is unique within an HTML document, the document.getElementById() is a quick way to access an element
+    The document.getElementById() method returns an Element object that represents an HTML element with an id that matches a 
+    specified string.
+    If the document has no element with the specified id, the document.getElementById() returns null.Because the id of an 
+    element is unique within an HTML document, the document.getElementById() is a quick way to access an element
 
     const element = document.getElementById(id);
 
@@ -41,7 +45,8 @@ example=>
         console.log(p);
 
         The document.getElementById() returns a DOM element specified by an id or null if no matching element found.
-        If multiple elements have the same id, even though it is invalid, the getElementById() returns the first element it encounters.
+        If multiple elements have the same id, even though it is invalid, the getElementById() returns the first element
+         it encounters.
 
 2)select element by name=>
         Every element on an HTML document may have a name attribute:
@@ -74,7 +79,8 @@ example=>
 
 3)select element by tagName=>
 
-The getElementsByTagName() method accepts a tag name and returns a live HTMLCollection of elements with the matching tag name in the order which they appear in the document.
+The getElementsByTagName() method accepts a tag name and returns a live HTMLCollection of elements with the matching tag 
+name in the order which they appear in the document.
 
 The following illustrates the syntax of the getElementsByTagName():
 let elements = document.getElementsByTagName(tagName);
@@ -154,7 +160,7 @@ The querySelector() finds the first element that matches a CSS selector or a gro
 
     link.setAttribute('target', '_blank');
 
-    ******************************triversing    element*************************
+    ****************************** triversing element *************************
 
    1) Triversing element=>(parent node)
 
@@ -226,10 +232,13 @@ The querySelector() finds the first element that matches a CSS selector or a gro
 
 3)create element vs innerHtml=>
 
-    However, using the innerHTML causes the web browsers to reparse and recreate all DOM nodes inside the div element. Therefore, it is less efficient than creating a new element and appending to the div. In other words, creating a new element and appending it to the DOM tree provides better performance than the innerHTML.
+    However, using the innerHTML causes the web browsers to reparse and recreate all DOM nodes inside the div element. 
+    Therefore, it is less efficient than creating a new element and appending to the div. In other words, creating a new 
+    element and appending it to the DOM tree provides better performance than the innerHTML.
 
 4)before()=>
-The element.before() method allows you to insert one or more nodes before the element. The following shows the syntax of the before() method:
+The element.before() method allows you to insert one or more nodes before the element. The following shows the syntax of 
+the before() method:
 
             const p = document.querySelector('p');
             // create a new h1 element

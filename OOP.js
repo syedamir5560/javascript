@@ -52,6 +52,7 @@ types in ES5. In this pattern:
                 console.log(p1.fullname());
 
 Prototype Inheritance=>
+
             In prototypal inheritance, an object “inherits” properties from another object via 
             the prototype linkage.  
                 
@@ -134,7 +135,7 @@ ES6 introduces the class keyword that makes the constructor/prototype pattern ea
 
 o State:=> Described by the attributes of an object.
 o Behavior:=> Describes how the object will act.
-o Identity:=>    A unique value that distinguishes an object from a set of similar 
+o Identity:=> A unique value that distinguishes an object from a set of similar 
 such objects.
 
 Classes=>
@@ -245,7 +246,9 @@ Getters/setters==>>
         The static keyword can be applied to functions in a class. Static members are referenced 
 by the class name.The JavaScript provides static methods that belong to the class instead of an 
 instance of that class. So, an instance is not required to call the static method. These methods
- are called directly on the class itself.
+are called directly on the class itself.
+
+
 
 Example1=>    class Statickey{
                     static person(){
@@ -255,7 +258,8 @@ Example1=>    class Statickey{
             Statickey.person();//invoke static method
 
 Ex2(sorting)=>(static methods)   
-        class Users{
+
+        class       {
                 constructor(name,age,income){
                     this.name=name;
                     this.age=age;
@@ -269,9 +273,9 @@ Ex2(sorting)=>(static methods)
                 }
                 }
 
-                let user1=new Users("aamir",45,45000);  
-                let user2=new Users("ali",30,10000);
-                let user3=new Users("aliza",48,50000);
+                let user1=new Users("aamir", 45,45000);  
+                let user2=new Users("ali", 30,10000);
+                let user3=new Users("aliza", 48,50000);
 
                 let user=[user1,user2,user3];
                 user.sort(Users.compareByAge);
@@ -279,22 +283,23 @@ Ex2(sorting)=>(static methods)
 
                 console.log(user);    
 
-example3=> Static data member
-                class Users{
-                    static id=1;
-                    constructor(name,age,income){
-                        this.name=name;
-                        this.age=age;
-                        this.income=income;
-                        this.id=Users.id++;
-                    }
-                    }
+example3=>      Static data member
 
-                    let user1=new Users("aamir",45,45000);  
-                    let user2=new Users("ali",30,10000);
-                    let user3=new Users("aliza",48,50000);
-                    let user=[user1,user2,user3]
-                    console.log(user);
+                    class Users{
+                        static id=1;
+                        constructor(name,age,income){
+                            this.name=name;
+                            this.age=age;
+                            this.income=income;
+                            this.id=Users.id++;
+                        }
+                        }
+
+                        let user1=new Users("aamir",45,45000);  
+                        let user2=new Users("ali",30,10000);
+                        let user3=new Users("aliza",48,50000);
+                        let user=[user1,user2,user3]
+                        console.log(user);
 
 : It is not mandatory to include a constructor definition. Every class by default has a 
 constructor by default.
@@ -501,9 +506,6 @@ Example=>
           this.phone = phone;
           this.membership = membership;
         }
-
-    
-
       }
 
 let john = new Customer('John','Doe',6765756,'Premium')
@@ -518,15 +520,4 @@ console.log(Customer.prototype);
 
 
 
-
-
-
-
-
-
-            */
-
-
-
-
-
+*/

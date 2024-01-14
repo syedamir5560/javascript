@@ -77,17 +77,20 @@ Second, the size of an array is dynamic and auto - growing.In other words, you d
 
 /********************************** ARRAY METHODS ***************************************
  
-Map, reduce, and filter are all array methods in JavaScript. Each one will iterate over an array and perform a transformation or computation. Each will return a new array based on the result of the function.
+Map, reduce, and filter are all array methods in JavaScript. Each one will iterate over an array and perform a transformation 
+or computation. Each will return a new array based on the result of the function.
 
 Map=>
-The map() method is used for creating a new array from an existing one, applying a function to each one of the elements of the first array.
+The map() method is used for creating a new array from an existing one, applying a function to each one of the elements of 
+ the first array.
 
 Syntex=>
           var new_array = arr.map(function callback(element, index, array) {
             // Return value for new_array
         }[, thisArg])
 
-        function(currentValue, index, arr): It is a required parameter and it runs on each element of the array. It contains three parameters which are listed below:
+        function(currentValue, index, arr): It is a required parameter and it runs on each element of the array. It contains 
+        three parameters which are listed below:
 
         1)currentValue:=> It is a required parameter and it holds the value of the current element.
         2)index:=> It is an optional parameter and it holds the index of the current element.
@@ -102,7 +105,9 @@ Example=>
                       console.log(arr);
 
 filter=>
-        The filter() method takes each element in an array and it applies a conditional statement against it. If this conditional returns true, the element gets pushed to the output array. If the condition returns false, the element does not get pushed to the output array. 
+        The filter() method takes each element in an array and it applies a conditional statement against it. If this
+        conditional returns true, the element gets pushed to the output array. If the condition returns false, the element 
+        does not get pushed to the output array. 
 
 Syntex=>
                         let comp=[20,30,40,50,60,2,8,4,1,3,5];
@@ -115,7 +120,8 @@ Syntex=>
                           console.log(even);
 
 reduce=>
-        The reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer function on each element of the array.
+        The reduce() method reduces an array of values down to just one value. To get the output value, it runs a reducer 
+        function on each element of the array.
        
       Syntax:=>
                       arr.reduce(callback[, initialValue])

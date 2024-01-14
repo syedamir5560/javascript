@@ -45,7 +45,8 @@ else {
 
 JavaScript If...else if statement
 
-It evaluates the content only if expression is true from several expressions. The signature of JavaScript if else if statement is given below.
+It evaluates the content only if expression is true from several expressions. The signature of JavaScript if else if statement 
+is given below.
 
 if(expression1){  
     //content to be evaluated if expression1 is true  
@@ -74,7 +75,8 @@ else if (b == 40) {
 
 Introduction to the JavaScript switch case statement
 
-The switch statement evaluates an expression, compares its result with case values, and executes the statement associated with the matching case value.
+The switch statement evaluates an expression, compares its result with case values, and executes the statement associated with
+ the matching case value.
 
 var grade = "A";
 var res;

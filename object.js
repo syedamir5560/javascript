@@ -2,7 +2,8 @@
                             
   In JavaScript, an object is an unordered collection of key-value pairs. Each key-value pair is called a property.
 
-  The key of a property can be a string. And the value of a property can be any value, e.g., a string, a number, an array, and even a function.
+  The key of a property can be a string. And the value of a property can be any value, e.g., a string, a number, an array, 
+  and even a function.
 
   JavaScript provides you with many ways to create an object. The most commonly used one is to use the object literal notation.
 
@@ -38,7 +39,8 @@
 
   ******object using new keyword********
 
-  The regular {...} syntax allows us to create one object. But often we need to create many similar objects, like multiple users or menu items and so on.
+  The regular {...} syntax allows us to create one object. But often we need to create many similar objects, like multiple 
+  users or menu items and so on.
 
   That can be done using constructor functions and the "new" operator.
 
@@ -61,7 +63,8 @@
   They are named with capital letter first.
   They should be executed only with "new" operator.
 
-  Using constructor functions to create objects gives a great deal of flexibility. The constructor function may have parameters that define how to construct the object, and what to put in it.
+  Using constructor functions to create objects gives a great deal of flexibility. The constructor function may have parameters 
+  that define how to construct the object, and what to put in it.
 
   For instance:
 
@@ -166,7 +169,9 @@
 
   ************************optional chaining**********************
 
-  Optional chaining is a feature of javascript that allow you to access the properties of an object and element of an array without having to check the array and object is null or undefine first it is represent by ?. operator and used to cociesly access deeply nested property without having to write long chain of if else statement 
+  Optional chaining is a feature of javascript that allow you to access the properties of an object and element of an array
+  without having to check the array and object is null or undefine first it is represent by ?. operator and used to cociesly 
+  access deeply nested property without having to write long chain of if else statement 
 
   the optional chaining ?. stops the evaluation if the value before ?. is undefined or null and returns undefined.
 
@@ -175,7 +180,8 @@
   let user = {}; // user has no address
   alert( user?.address?.street ); // undefined (no error)
 
-  The ?. [] syntax also works, if we’d like to use brackets [] to access properties instead of dot .. Similar to previous cases, it allows to safely read a property from an object that may not exist.
+  The ?. [] syntax also works, if we’d like to use brackets [] to access properties instead of dot .. Similar to previous cases, it allows to
+   safely read a property from an object that may not exist.
 
   let key = "firstName";
 
@@ -192,7 +198,8 @@
 
   *****************object destructuring***************
 
-  the destructurig assignment syntex is a javascript expression that make it possible to unpack from Array or property from object, into distinct variables. 
+  the destructurig assignment syntex is a javascript expression that make it possible to unpack from Array or property from 
+  object, into distinct variables. 
 
   let obj = {
   name: 'ali',
