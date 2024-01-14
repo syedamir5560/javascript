@@ -123,7 +123,8 @@
 
   four ways to associate function to object
 
-  ***************1********************
+  *******************1*****************
+
   let person={
   name:"John",
   age:30,
@@ -133,7 +134,7 @@
   }
   person.sayHello();
 
-  ***************2*****************
+  *******************2*****************
 
   let person={
   name:"John",
@@ -196,7 +197,7 @@
 
   delete user?.name; 
 
-  *****************object destructuring***************
+  *************************object destructuring*******************
 
   the destructurig assignment syntex is a javascript expression that make it possible to unpack from Array or property from 
   object, into distinct variables. 
@@ -213,7 +214,7 @@
   let { name, age, city } = obj;
   console.log(`name is${name} and age is ${age} city is ${city.state}`);
 
-  /***************************** Object Property***********************************************
+  /************************************* Object Property***********************************************
 
   Object properties have a three special property called flags
 
