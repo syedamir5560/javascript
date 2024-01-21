@@ -1,7 +1,10 @@
 /**********************Events Handling in js*********************
 
 Event=>
-    The change in the state of an object is known as an Event. In html, there are various events which represents that some activity is performed by the user or by the browser. When javascript code is included in HTML, js react over these events and allow the execution. This process of reacting over the events is called Event Handling. Thus, js handles the HTML events via Event Handlers.
+    The change in the state of an object is known as an Event. In html, there are various events which represents that some
+ activity is performed by the user or by the browser. When javascript code is included in HTML , js react over these events
+and allow the execution. This process of reacting over the events is called Event Handling. Thus, js handles the HTML
+ events via Event Handlers.
 
 For example, when a user clicks over the browser, add js code, which will execute the task to be performed on the event.
 
@@ -13,14 +16,15 @@ example=>
             </div>
             
 
-            let btn=document.querySelector('#btn');
+            let btn = document.querySelector('#btn');
 
             btn.addEventListener("click",()=>{  //clicked display
                     alert("clicked");
             })
 
 
-            When you click the button, you’re clicking not only the button but also the button’s container, the div, and the whole webpage.
+            When you click the button, you’re clicking not only the button but also the button’s container, the div, and the
+             whole webpage.
 
             There are two main event models: event bubbling and event capturing.
 
@@ -30,7 +34,8 @@ n the event bubbling model, an event starts at the most specific element and the
 
 button=>div with the id container =>body=> html => document
 
-The click event first occurs on the button which is the element that was clicked. Then the click event goes up the DOM tree, firing on each node along its way until it reaches the document object.
+The click event first occurs on the button which is the element that was clicked. Then the click event goes up the DOM tree,
+ firing on each node along its way until it reaches the document object.
 
 2)Event capturing=>
 
@@ -40,7 +45,8 @@ When you click the button, the click event occurs in the following order:
 
 3) HTML event handler attributes=>
 
-To assign an event handler to an event associated with an HTML element, you can use an HTML attribute with the name of the event handler. For example, to execute some code when a button is clicked, you use the following:
+To assign an event handler to an event associated with an HTML element, you can use an HTML attribute with the name of the event
+ handler. For example, to execute some code when a button is clicked, you use the following:
 <script>
 
 function showAlert() {
@@ -84,12 +90,14 @@ There are 3 ways to assign event handlers:=>
 
 HTML attributes are used sparingly, because JavaScript in the middle of an HTML tag looks a little bit odd and alien. Also can’t write lots of code in there.
 
-DOM properties are ok to use, but we can’t assign more than one handler of the particular event. In many cases that limitation is not pressing.
+DOM properties are ok to use, but we can’t assign more than one handler of the particular event. In many cases that limitation 
+is not pressing.
 
 The last way is the most flexible, but it is also the longest to write. There are few events that only work with it
 
 1)Event Bubbling=>
-            When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+            When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on 
+            other ancestors.
 
 example=>   <style>
   body * {
@@ -104,11 +112,13 @@ example=>   <style>
   </div>
 </form>
 
-The form element is at the top of the DOM tree and therefore it will receive all events that occur within itself or any descendants (including nested
+The form element is at the top of the DOM tree and therefore it will receive all events that occur within itself or any 
+descendants (including nested
 
 Stopping bubbling=>
 
-A bubbling event goes from the target element straight up. Normally it goes upwards till <html>, and then to document object, and some events even reach window, calling all handlers on the path.
+A bubbling event goes from the target element straight up. Normally it goes upwards till <html>, and then to document 
+object, and some events even reach window, calling all handlers on the path.
 
 But any handler may decide that the event has been fully processed and stop the bubbling.
 
@@ -121,11 +131,13 @@ The method for it is event.stopPropagation().
 </form>
     
 Event Capturing=>
-        Event capturing is opposite to the event bubbling. In event capturing the flow goes from outermost element to the target element. Whereas in case of event bubbling the flow goes from target element to the outermost element.
+        Event capturing is opposite to the event bubbling. In event capturing the flow goes from outermost element to the
+         target element. Whereas in case of event bubbling the flow goes from target element to the outermost element.
 
         addEventListener(type, listener, useCapture)
 
-        userCapture − it is a Boolean value. It indicates the event phase. It will be false Bydefault and that indicates it is in the bubbling phass
+        userCapture − it is a Boolean value. It indicates the event phase. It will be false Bydefault and that indicates it is
+         in the bubbling phass
 
 example=>
            <body>
@@ -150,7 +162,8 @@ Event Deligation=>
 
     Having a large number of event handlers will take up memory and degrade the performance of a page.
     Instead of having multiple event handlers, you can assign a single event handler to handle all the click events:
-    The event delegation technique utilizes the event bubbling to handle event at a higher level in the DOM than the element on which the event originated.
+    The event delegation technique utilizes the event bubbling to handle event at a higher level in the DOM than the element
+    on which the event originated.
 
 Example=>
         <ul id="menu">

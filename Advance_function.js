@@ -374,7 +374,8 @@ ex2=> calculate max number from array
               console.log(Math.max.apply(null,a))
 
 BIND()=>
-      bind() returns a new copy of the original function with all its properties intact but bound to With the bind() method, an object can borrow a method from another object.
+      bind() returns a new copy of the original function with all its properties intact but bound to With the bind() method, 
+      an object can borrow a method from another object.
 
                 const person = {
                       firstName:"John",

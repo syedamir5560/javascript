@@ -1,8 +1,8 @@
 /*
 What is DOM ?
     
-Document object model is an API for manipulating htlm document.DOM represent html document as a tree of nodes.DOM
-  provoide a function that allow you to add , remove ,  and modify part of the document effectivly
+Document object model is an API for manipulating htlm document.DOM represent html document as a tree 
+of nodes.DOM provoide a function that allow you to add , remove ,  and modify part of the document effectivly
 
 A document as a hierarchy of nodes=>
 
@@ -18,16 +18,19 @@ The DOM represents an HTML document as a hierarchy of nodes. Consider the follow
 </html>
 
 In this DOM tree, the document is the root node. The root node has one child node which is the <html> element. The <html>
- element is called the document element.   
+element is called the document element.   
 
 selecting Elements=>
 
 1)  select element by id=>
 
-    The document.getElementById() method returns an Element object that represents an HTML element with an id that matches a 
+    The document.getElementById() method returns an Element object that represents an HTML element 
+    with an id that matches a 
     specified string.
-    If the document has no element with the specified id, the document.getElementById() returns null.Because the id of an 
-    element is unique within an HTML document, the document.getElementById() is a quick way to access an element
+    If the document has no element with the specified id, the document.getElementById() returns null.
+    Because the id of an 
+    element is unique within an HTML document, the document.getElementById() is a quick way to access
+    an element
 
     const element = document.getElementById(id);
 
@@ -105,7 +108,8 @@ let elements = document.getElementsByTagName(tagName);
     </body>
 
 getElementsByClassName()=>
-    The getElementsByClassName() method returns an array-like of objects of the child elements with a specified class name
+    The getElementsByClassName() method returns an array-like of objects of the child elements with 
+    a specified class name
                     <body>
                         <div>
                             <header>
@@ -180,7 +184,8 @@ The querySelector() finds the first element that matches a CSS selector or a gro
     3)chid node=>
             Get the first child element
 
-            To get the first child element of a specified element, you use the firstChild property of the element:
+            To get the first child element of a specified element, you use the firstChild property of
+             the element:
 
             let firstChild = parentElement.firstElemtChild; 
 
@@ -202,7 +207,7 @@ The querySelector() finds the first element that matches a CSS selector or a gro
 
                 div.innerHtml='<p>new p</p>   //add child element
 
-                document.body.appe  ndsChild(div); //append it into body
+                document.body.appendsChild(div); //append it into body
 
                 div.id="content";        // add id to Div
 
@@ -232,12 +237,14 @@ The querySelector() finds the first element that matches a CSS selector or a gro
 
 3)create element vs innerHtml=>
 
-    However, using the innerHTML causes the web browsers to reparse and recreate all DOM nodes inside the div element. 
-    Therefore, it is less efficient than creating a new element and appending to the div. In other words, creating a new 
-    element and appending it to the DOM tree provides better performance than the innerHTML.
+However, using the innerHTML causes the web browsers to reparse and recreate all DOM nodes inside the
+ div element.Therefore, it is less efficient than creating a new element and appending to the div. 
+ In other words, creating a new element and appending it to the DOM tree provides better performance 
+ than the innerHTML.
 
 4)before()=>
-The element.before() method allows you to insert one or more nodes before the element. The following shows the syntax of 
+The element.before() method allows you to insert one or more nodes before the element. The following
+ shows the syntax of 
 the before() method:
 
             const p = document.querySelector('p');
@@ -270,7 +277,8 @@ To remove a child element of a node, you use the removeChild() method:
                 fisrt.removeChild(fisrt.lastElementChild )
 
 8)insert before first element child=>
-To insert a node before another node as a child node of a parent node, you use the parentNode.insertBefore() method:
+To insert a node before another node as a child node of a parent node, you use the parentNode.
+insertBefore() method:
     parentNode.insertBefore(newNode, existingNode);
 
     let fisrt=document.querySelector("#first-list");
@@ -280,7 +288,8 @@ To insert a node before another node as a child node of a parent node, you use t
    fisrt.insertBefore(li , fisrt.firstElementChild) 
 
 9)insert after()=>
-JavaScript DOM provides the insertBefore() method that allows you to insert a new node after an existing node as a child node.
+JavaScript DOM provides the insertBefore() method that allows you to insert a new node after an 
+existing node as a child node.
 
     let fisrt=document.querySelector("#first-list");
     let li=document.createElement("li");
@@ -300,7 +309,8 @@ btn.setAttribute('name' , 'send');
 
 2)Introduction to the JavaScript getAttribute() method
 
-    To get the value of an attribute on a specified element, you call the getAttribute() method of the element:
+    To get the value of an attribute on a specified element, you call the getAttribute() method of
+     the element:
 
         let value = element.getAttribute(name);
 
@@ -337,7 +347,8 @@ To set the inline style of an element, you use the style property of that elemen
 element.style
 element.style.color = 'red';
 
-To completely override the existing inline style, you set the cssText property of the style object. For example:
+To completely override the existing inline style, you set the cssText property of the style object.
+ For example:
 
 element.style.cssText = 'color:red;background-color:yellow';    
 
@@ -347,8 +358,8 @@ Or you can use the setAttribute() method:
 
 2)Introduction to the JavaScript className
 
-The className is the property of an element that returns a space-separated list of CSS classes of the element as a string:
-
+The className is the property of an element that returns a space-separated list of CSS classes of
+ the element as a string:
 element.className
 The following shows the classes of the ul element in the console window:
 

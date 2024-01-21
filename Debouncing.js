@@ -18,7 +18,7 @@ example=>>
             if(timer) clearTimeout();
             else setTimeout(()=>{
         callback()
-            },delay)
+            },delay)  
         }
     
         }
